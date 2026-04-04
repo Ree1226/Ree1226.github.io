@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ページが見つかりません</title>
+    <script>
+        /* もし開こうとしたURLに「bookree」（大文字小文字問わず）が含まれていたら、新しいURLへ一瞬で強制転送する */
+        if (window.location.pathname.toLowerCase().indexOf("/bookree") !== -1) {
+            window.location.replace("https://ree-series.jp/bookree/");
+        }
+    </script>
+</head>
+<body>
+    <h2>ページが移動しました</h2>
+    <p>ご指定のページはURLが変更されました。</p>
+    <p><a href="https://ree-series.jp/bookree/">こちらをクリックして新しいBookReeのサイトへ移動してください。</a></p>
+</body>
+</html>
