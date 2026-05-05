@@ -3,28 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ree Series | Webサービス・アプリ開発実績</title>
+    <title>Ree Series | Webサービス開発ポートフォリオ</title>
+    <meta name="description" content="現役システムエンジニアReeによる、Webサービスおよびアプリ開発のポートフォリオサイトです。">
+    <!-- ReeWebStudioと同じCSSを読み込む場合は以下のコメントアウトを外してください -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+        /* 共通設定 */
+        :root {
+            --primary-color: #0f4c81; /* ReeWebStudioと同じ信頼感のあるブルー */
+            --accent-color: #e87a2d;  /* ReeWebStudioと同じオレンジ */
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px; /* ポートフォリオなので少し幅を狭めて読みやすく */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        a {
+            color: var(--primary-color);
+            transition: opacity 0.3s;
+        }
+        a:hover {
+            opacity: 0.7;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        header h1 {
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+        }
+        header p {
+            margin: 0;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* メインコンテンツ */
+        main {
+            padding: 50px 0;
+        }
+        h2 {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        /* サービス一覧（カード型デザイン） */
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .service-item {
+            background: #fff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 6px solid var(--primary-color);
+        }
+        .service-item h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+        }
+        .service-item h3 a {
+            text-decoration: none;
+        }
+        .service-item p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* Web制作事業の案内エリア */
+        .business-section {
+            background: #e7f5ff; /* 薄いブルー */
+            border: 1px solid #b3d7ff;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        .business-section h2 {
+            border: none;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            box-shadow: 0 4px 6px rgba(232, 122, 45, 0.3);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(232, 122, 45, 0.4);
+            color: #fff;
+        }
+
+        /* フッター */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>Ree Series</h1>
-        <p>システムエンジニアとしてのWebサービス開発ポートフォリオ</p>
+        <div class="container">
+            <h1>Ree Series</h1>
+            <p>現役システムエンジニアによるWebサービス開発ポートフォリオ</p>
+        </div>
     </header>
 
-    <main>
+    <main class="container">
+        <!-- アプリケーション開発実績 -->
         <section>
-            <h2>運営サービス</h2>
-            <ul>
-                <li>
-                    <a href="/bookree/">BookRee（ブックリー）</a>
+            <h2>運営サービス (Web Applications)</h2>
+            <ul class="service-list">
+                <li class="service-item">
+                    <h3><a href="/bookree/" target="_blank">BookRee（ブックリー）</a></h3>
                     <p>書籍ランキングで見つける、次の一冊。みんなの評価をもとにした書籍検索・比較ツールです。</p>
                 </li>
-                <li>
-                    <a href="/cinemaree/">CinemaRee（シネマリー）</a>
+                <li class="service-item">
+                    <h3><a href="/cinemaree/" target="_blank">CinemaRee（シネマリー）</a></h3>
                     <p>映画ランキングで見つける、次の一本。みんなの評価をもとにした映画検索・比較ツールです。</p>
                 </li>
             </ul>
         </section>
+
+        <!-- Web制作事業への誘導 -->
+        <section class="business-section">
+            <h2>Web制作事業 (Web Studio)</h2>
+            <p>自社サービスの開発・運用ノウハウを活かし、<br>高品質なビジネス用ホームページを爆速・格安で提供しています。</p>
+            <a href="https://reewebstudio.jp/" class="btn" target="_blank">
+                ReeWebStudio 公式サイトへ
+            </a>
+        </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <p><small>&copy; 2026 Ree Series. All rights reserved.</small></p>
+        </div>
+    </footer>
+
 </body>
 </html>
